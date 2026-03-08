@@ -25,7 +25,7 @@ const QuestionScreen = ({ question, questionNumber, totalQuestions, onAnswer }: 
   const mood = moodCycle[(questionNumber - 1) % moodCycle.length];
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-4 py-8 gap-4">
+    <div className="flex flex-col items-center justify-center min-h-[100dvh] px-4 py-4 md:py-8 gap-2 md:gap-4 overflow-x-hidden">
       <ProgressBar current={questionNumber} total={totalQuestions} />
 
       <div className="flex flex-col md:flex-row items-center gap-6 mt-4">

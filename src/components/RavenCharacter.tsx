@@ -35,9 +35,9 @@ interface RavenCharacterProps {
 }
 
 const sizes = {
-  sm: "h-48",
-  md: "h-72",
-  lg: "h-96",
+  sm: "h-[20vh] min-h-[10rem] max-h-[16rem]",
+  md: "h-[30vh] min-h-[12rem] max-h-[24rem]",
+  lg: "h-[45vh] min-h-[16rem] max-h-[32rem]",
 };
 
 const RavenCharacter = ({ mood, size = "md" }: RavenCharacterProps) => {

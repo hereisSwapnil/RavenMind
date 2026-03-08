@@ -2,22 +2,26 @@ import bgMystical from "@/assets/bg-mystical.jpg";
 
 const GameBackground = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-[100dvh] overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${bgMystical})` }}
       />
-      <div className="absolute inset-0 gradient-mystical opacity-40" />
-      {/* Floating diamond particles */}
-      {Array.from({ length: 12 }).map((_, i) => (
+      <div className="absolute inset-0 gradient-westeros opacity-60" />
+      {/* Floating fire embers */}
+      {Array.from({ length: 25 }).map((_, i) => (
         <div
           key={i}
-          className="absolute w-3 h-3 rotate-45 border border-foreground/20 animate-pulse-glow"
+          className="absolute rounded-full bg-accent/40 animate-pulse-glow box-glow-blood"
           style={{
-            left: `${8 + (i * 23) % 90}%`,
-            top: `${5 + (i * 17) % 85}%`,
-            animationDelay: `${i * 0.4}s`,
-            animationDuration: `${2 + (i % 3)}s`,
+            width: `${Math.random() * 4 + 2}px`,
+            height: `${Math.random() * 4 + 2}px`,
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 5}s`,
+            animationDuration: `${Math.random() * 3 + 2}s`,
+            transform: `translateY(-${Math.random() * 50 + 20}vh)`,
+            transition: 'transform 10s linear',
           }}
         />
       ))}

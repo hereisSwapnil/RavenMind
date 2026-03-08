@@ -111,17 +111,23 @@ export class AkinatorEngine {
             "isTyrell", "isMartell", "isGreyjoy", "isBolton",
         ]);
 
-        const topTier = scored.filter((s) => s.entropy >= bestEntropy * 0.99);
+        // To prevent the game from starting with identical questions every time,
+        // we add a tiny bit of leniency (2%) to group similarly good questions together.
+        const topTier = scored.filter((s) => s.entropy >= bestEntropy * 0.98);
 
         // Early game: prefer non-house questions when tied
         if (this.answerHistory.length < 4) {
-            const nonHouse = topTier.find(
+            const nonHouse = topTier.filter(
                 (s) => !HOUSE_TRAITS.has(s.question.traitKey)
             );
-            if (nonHouse) return nonHouse.question;
+            if (nonHouse.length > 0) {
+                const randomIndex = Math.floor(Math.random() * nonHouse.length);
+                return nonHouse[randomIndex].question;
+            }
         }
 
-        return topTier[0].question;
+        const randomIndex = Math.floor(Math.random() * topTier.length);
+        return topTier[randomIndex].question;
     }
 
     /**

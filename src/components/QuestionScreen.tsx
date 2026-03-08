@@ -8,7 +8,6 @@ type PlayerWarning = "random" | "contrarian" | "cheating" | null;
 interface QuestionScreenProps {
   question: string;
   questionNumber: number;
-  confidence: number; // 0–100
   playerWarning: PlayerWarning;
   onAnswer: (answer: string) => void;
 }
@@ -49,7 +48,6 @@ const WARNING_MESSAGES: Record<NonNullable<PlayerWarning>, { title: string; body
 const QuestionScreen = ({
   question,
   questionNumber,
-  confidence,
   playerWarning,
   onAnswer,
 }: QuestionScreenProps) => {
@@ -61,25 +59,11 @@ const QuestionScreen = ({
 
   return (
     <div className="flex flex-col items-center justify-center min-h-[100dvh] px-4 py-4 md:py-8 gap-2 md:gap-4 overflow-x-hidden">
-      {/* Confidence bar */}
+      {/* Question counter */}
       <div className="w-full max-w-md">
-        <div className="flex justify-between items-center mb-1">
-          <span className="text-[#f4f1ea]/40 text-xs font-body uppercase tracking-widest">
-            Question #{questionNumber}
-          </span>
-          <span className="text-[#f4f1ea]/40 text-xs font-body uppercase tracking-widest">
-            Confidence{" "}
-            <span className="text-primary font-bold">{confidence}%</span>
-          </span>
-        </div>
-        <div className="w-full h-1 bg-[#2c2e33] rounded-full overflow-hidden">
-          <motion.div
-            className="h-full bg-gradient-to-r from-[#7f1d1d] to-[#991b1b]"
-            initial={{ width: 0 }}
-            animate={{ width: `${confidence}%` }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          />
-        </div>
+        <span className="text-[#f4f1ea]/40 text-xs font-body uppercase tracking-widest">
+          Question #{questionNumber}
+        </span>
       </div>
 
       {/* Player warning banner */}

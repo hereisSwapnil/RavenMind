@@ -7,7 +7,6 @@ interface ResultScreenProps {
   characterDescription: string;
   characterImage: string;
   characterHouse: string;
-  confidence: number;
   onCorrect: () => void;
   onWrong: () => void;
   onPlayAgain: () => void;
@@ -18,7 +17,6 @@ const ResultScreen = ({
   characterDescription,
   characterImage,
   characterHouse,
-  confidence,
   onCorrect,
   onWrong,
   onPlayAgain,
@@ -45,21 +43,6 @@ const ResultScreen = ({
           <p className="text-[#f4f1ea]/50 font-body text-xs mt-1 uppercase tracking-widest">
             {characterHouse}
           </p>
-          {/* Confidence badge */}
-          <div className="mt-3 inline-flex items-center gap-2 px-3 py-1 bg-[#1a1c20]/80 border border-[#383a40] rounded-full">
-            <div
-              className={`w-2 h-2 rounded-full ${
-                confidence > 75
-                  ? "bg-green-500"
-                  : confidence > 40
-                  ? "bg-yellow-500"
-                  : "bg-orange-500"
-              }`}
-            />
-            <span className="text-[#f4f1ea]/60 text-xs font-body">
-              {confidence}% confidence
-            </span>
-          </div>
         </motion.div>
       </div>
 

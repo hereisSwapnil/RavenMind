@@ -15,7 +15,6 @@ const Index = () => {
   const [gameState, setGameState] = useState<GameState>("welcome");
   const [currentQuestion, setCurrentQuestion] = useState<Question | null>(null);
   const [questionCount, setQuestionCount] = useState(0);
-  const [confidence, setConfidence] = useState(0);
   const [guessedCharacter, setGuessedCharacter] = useState<Character | null>(null);
   const [playerWarning, setPlayerWarning] = useState<"random" | "contrarian" | "cheating" | null>(null);
 
@@ -40,14 +39,12 @@ const Index = () => {
     }
     setCurrentQuestion(q);
     setQuestionCount(engine.questionCount);
-    setConfidence(engine.confidencePercent);
     setPlayerWarning(engine.getPlayerWarning());
   }, [engine]);
 
   const handlePlay = useCallback(() => {
     engine.reset();
     setQuestionCount(0);
-    setConfidence(0);
     setPlayerWarning(null);
     setGuessedCharacter(null);
     setGameState("playing");
@@ -62,13 +59,11 @@ const Index = () => {
         const q = engine.getBestQuestion();
         setCurrentQuestion(q);
         setQuestionCount(engine.questionCount);
-        setConfidence(engine.confidencePercent);
         return;
       }
       if (!currentQuestion) return;
       engine.applyAnswer(currentQuestion.id, answer);
       setQuestionCount(engine.questionCount);
-      setConfidence(engine.confidencePercent);
       setPlayerWarning(engine.getPlayerWarning());
       advanceGame();
     },
@@ -94,7 +89,6 @@ const Index = () => {
     }
     setCurrentQuestion(q);
     setQuestionCount(engine.questionCount);
-    setConfidence(engine.confidencePercent);
   }, [engine]);
 
   const handlePlayAgain = useCallback(() => {
@@ -106,7 +100,6 @@ const Index = () => {
   useEffect(() => {
     if (gameState === "playing") {
       setQuestionCount(engine.questionCount);
-      setConfidence(engine.confidencePercent);
     }
   }, [gameState, engine]);
 
@@ -117,7 +110,6 @@ const Index = () => {
         <QuestionScreen
           question={currentQuestion.text}
           questionNumber={questionCount + 1}
-          confidence={confidence}
           playerWarning={playerWarning}
           onAnswer={handleAnswer}
         />
@@ -128,7 +120,6 @@ const Index = () => {
           characterDescription={guessedCharacter.description}
           characterImage={guessedCharacter.image}
           characterHouse={guessedCharacter.house}
-          confidence={confidence}
           onCorrect={handleCorrect}
           onWrong={handleWrong}
           onPlayAgain={handlePlayAgain}

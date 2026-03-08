@@ -116,11 +116,6 @@ export const questions: Question[] = [
         traitKey: "isWesterosi",
     },
     {
-        id: "q_spy",
-        text: "Does your character operate as a spy, assassin, or information gatherer?",
-        traitKey: "isSpy",
-    },
-    {
         id: "q_maester",
         text: "Is your character a maester or closely associated with the Citadel?",
         traitKey: "isMaester",
@@ -144,5 +139,30 @@ export const questions: Question[] = [
         id: "q_nightswatch",
         text: "Did your character take the black and join the Night's Watch?",
         traitKey: "isNightsWatch",
+    },
+    {
+        id: "q_resurrected",
+        text: "Was your character killed and brought back to life?",
+        traitKey: "diedAndResurrected",
+    },
+    {
+        id: "q_essos",
+        text: "Did your character spend significant time in Essos?",
+        traitKey: "isFromEssos",
+    },
+    {
+        id: "q_married",
+        text: "Was your character ever married?",
+        traitKey: "hasBeenMarried",
+    },
+    {
+        id: "q_religious",
+        text: "Is your character notably religious or associated with a faith?",
+        traitKey: "isReligious",
+    },
+    {
+        id: "q_older_generation",
+        text: "Is your character from the older generation (parents' age)?",
+        traitKey: "isOlderGeneration",
     },
 ];

@@ -10,8 +10,8 @@ interface GaveUpScreenProps {
 
 const GaveUpScreen = ({ bestGuess, onPlayAgain }: GaveUpScreenProps) => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[100dvh] px-4 py-8 gap-6 overflow-x-hidden">
-      <RavenCharacter mood="arms-crossed" size="lg" />
+    <div className="flex flex-col items-center justify-center min-h-[100dvh] px-4 py-4 gap-4 md:gap-6 overflow-x-hidden">
+      <RavenCharacter mood="arms-crossed" size="md" />
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -62,7 +62,7 @@ const GaveUpScreen = ({ bestGuess, onPlayAgain }: GaveUpScreenProps) => {
         onClick={onPlayAgain}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="mt-4 px-12 py-3 rounded-sm bg-gradient-to-b from-[#991b1b] to-[#7f1d1d] text-[#f4f1ea] font-display tracking-wider font-bold shadow-[inset_0_1px_0_rgba(255,100,100,0.3),_0_4px_15px_rgba(0,0,0,0.6)] hover:from-[#b91c1c] hover:to-[#991b1b] border border-[#b91c1c] transition-all duration-300"
+        className="mt-2 md:mt-4 px-12 py-3 rounded-sm bg-gradient-to-b from-[#991b1b] to-[#7f1d1d] text-[#f4f1ea] font-display tracking-wider font-bold shadow-[inset_0_1px_0_rgba(255,100,100,0.3),_0_4px_15px_rgba(0,0,0,0.6)] hover:from-[#b91c1c] hover:to-[#991b1b] border border-[#b91c1c] transition-all duration-300"
       >
         PLAY AGAIN
       </motion.button>

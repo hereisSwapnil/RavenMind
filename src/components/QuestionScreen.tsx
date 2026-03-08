@@ -58,7 +58,7 @@ const QuestionScreen = ({
   const warningMsg = playerWarning ? WARNING_MESSAGES[playerWarning] : null;
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[100dvh] px-4 py-4 md:py-8 gap-2 md:gap-4 overflow-x-hidden">
+    <div className="flex flex-col items-center justify-center min-h-[100dvh] px-4 py-2 md:py-4 gap-2 overflow-x-hidden">
       {/* Question counter */}
       <div className="w-full max-w-md">
         <span className="text-[#f4f1ea]/40 text-xs font-body uppercase tracking-widest">

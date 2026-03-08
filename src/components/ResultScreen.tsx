@@ -22,7 +22,7 @@ const ResultScreen = ({
   onPlayAgain,
 }: ResultScreenProps) => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center min-h-[100dvh] px-4 py-4 md:py-8 gap-8 md:gap-16 overflow-x-hidden w-full max-w-6xl mx-auto">
+    <div className="flex flex-col md:flex-row items-center justify-center min-h-[100dvh] px-4 py-4 gap-6 md:gap-12 overflow-x-hidden w-full max-w-6xl mx-auto">
       {/* Left Column (Raven & Title) */}
       <div className="flex flex-col items-center justify-center md:w-1/2">
         {/* Raven celebrating */}

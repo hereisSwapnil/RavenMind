@@ -1,76 +1,142 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import GameBackground from "@/components/GameBackground";
 import WelcomeScreen from "@/components/WelcomeScreen";
 import QuestionScreen from "@/components/QuestionScreen";
 import ResultScreen from "@/components/ResultScreen";
+import GaveUpScreen from "@/components/GaveUpScreen";
+import { AkinatorEngine } from "@/engine/akinator";
+import type { Character } from "@/data/characters";
+import type { Question } from "@/data/questions";
 
-const QUESTIONS = [
-  "Is your character real (exists or existed in real life)?",
-  "Is your character female?",
-  "Is your character associated with music?",
-  "Is your character from a movie?",
-  "Is your character American?",
-  "Is your character still alive?",
-  "Is your character known for acting?",
-  "Is your character a superhero?",
-  "Does your character have superpowers?",
-  "Is your character from an animated show?",
-  "Is your character associated with science?",
-  "Does your character wear glasses?",
-  "Is your character from a video game?",
-  "Is your character a villain?",
-  "Is your character from Japan?",
-];
-
-type GameState = "welcome" | "playing" | "result";
+type GameState = "welcome" | "playing" | "result" | "wrong" | "gaveup";
 
 const Index = () => {
+  const engineRef = useRef<AkinatorEngine>(new AkinatorEngine());
   const [gameState, setGameState] = useState<GameState>("welcome");
-  const [questionIndex, setQuestionIndex] = useState(0);
+  const [currentQuestion, setCurrentQuestion] = useState<Question | null>(null);
+  const [questionCount, setQuestionCount] = useState(0);
+  const [confidence, setConfidence] = useState(0);
+  const [guessedCharacter, setGuessedCharacter] = useState<Character | null>(null);
+  const [playerWarning, setPlayerWarning] = useState<"random" | "contrarian" | "cheating" | null>(null);
+
+  const engine = engineRef.current;
+
+  const advanceGame = useCallback(() => {
+    if (engine.isConfident()) {
+      setGuessedCharacter(engine.getGuess());
+      setGameState("result");
+      return;
+    }
+    if (engine.hasGivenUp()) {
+      setGuessedCharacter(engine.getGuess());
+      setGameState("gaveup");
+      return;
+    }
+    const q = engine.getBestQuestion();
+    if (!q) {
+      setGuessedCharacter(engine.getGuess());
+      setGameState("gaveup");
+      return;
+    }
+    setCurrentQuestion(q);
+    setQuestionCount(engine.questionCount);
+    setConfidence(engine.confidencePercent);
+    setPlayerWarning(engine.getPlayerWarning());
+  }, [engine]);
 
   const handlePlay = useCallback(() => {
+    engine.reset();
+    setQuestionCount(0);
+    setConfidence(0);
+    setPlayerWarning(null);
+    setGuessedCharacter(null);
     setGameState("playing");
-    setQuestionIndex(0);
-  }, []);
+    const q = engine.getBestQuestion();
+    setCurrentQuestion(q);
+  }, [engine]);
 
   const handleAnswer = useCallback(
     (answer: string) => {
       if (answer === "back") {
-        if (questionIndex > 0) setQuestionIndex((i) => i - 1);
+        engine.undoLastAnswer();
+        const q = engine.getBestQuestion();
+        setCurrentQuestion(q);
+        setQuestionCount(engine.questionCount);
+        setConfidence(engine.confidencePercent);
         return;
       }
-      if (questionIndex >= QUESTIONS.length - 1) {
-        setGameState("result");
-      } else {
-        setQuestionIndex((i) => i + 1);
-      }
+      if (!currentQuestion) return;
+      engine.applyAnswer(currentQuestion.id, answer);
+      setQuestionCount(engine.questionCount);
+      setConfidence(engine.confidencePercent);
+      setPlayerWarning(engine.getPlayerWarning());
+      advanceGame();
     },
-    [questionIndex]
+    [currentQuestion, engine, advanceGame]
   );
+
+  const handleCorrect = useCallback(() => {
+    // They confirmed — restart
+    setGameState("welcome");
+    engine.reset();
+  }, [engine]);
+
+  const handleWrong = useCallback(() => {
+    // Remove the wrong guess from candidates pool, then continue
+    engine.markWrongGuess();
+    setGameState("playing");
+    // After removing the wrong candidate, get the next best question
+    const q = engine.getBestQuestion();
+    if (!q) {
+      setGuessedCharacter(engine.getGuess());
+      setGameState("gaveup");
+      return;
+    }
+    setCurrentQuestion(q);
+    setQuestionCount(engine.questionCount);
+    setConfidence(engine.confidencePercent);
+  }, [engine]);
 
   const handlePlayAgain = useCallback(() => {
     setGameState("welcome");
-    setQuestionIndex(0);
-  }, []);
+    engine.reset();
+  }, [engine]);
+
+  // Sync question count display
+  useEffect(() => {
+    if (gameState === "playing") {
+      setQuestionCount(engine.questionCount);
+      setConfidence(engine.confidencePercent);
+    }
+  }, [gameState, engine]);
 
   return (
     <GameBackground>
       {gameState === "welcome" && <WelcomeScreen onPlay={handlePlay} />}
-      {gameState === "playing" && (
+      {gameState === "playing" && currentQuestion && (
         <QuestionScreen
-          question={QUESTIONS[questionIndex]}
-          questionNumber={questionIndex + 1}
-          totalQuestions={QUESTIONS.length}
+          question={currentQuestion.text}
+          questionNumber={questionCount + 1}
+          confidence={confidence}
+          playerWarning={playerWarning}
           onAnswer={handleAnswer}
         />
       )}
-      {gameState === "result" && (
+      {gameState === "result" && guessedCharacter && (
         <ResultScreen
-          characterName="Sherlock Holmes"
-          characterDescription="A fictional detective created by Sir Arthur Conan Doyle, known for his brilliant deductive reasoning."
-          characterImage="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Sherlock_Holmes_Portrait_Paget.jpg/220px-Sherlock_Holmes_Portrait_Paget.jpg"
-          onCorrect={handlePlayAgain}
-          onWrong={handlePlayAgain}
+          characterName={guessedCharacter.name}
+          characterDescription={guessedCharacter.description}
+          characterImage={guessedCharacter.image}
+          characterHouse={guessedCharacter.house}
+          confidence={confidence}
+          onCorrect={handleCorrect}
+          onWrong={handleWrong}
+          onPlayAgain={handlePlayAgain}
+        />
+      )}
+      {gameState === "gaveup" && (
+        <GaveUpScreen
+          bestGuess={guessedCharacter}
           onPlayAgain={handlePlayAgain}
         />
       )}

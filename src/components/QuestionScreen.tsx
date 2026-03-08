@@ -31,7 +31,7 @@ const QuestionScreen = ({ question, questionNumber, totalQuestions, onAnswer }: 
       <div className="flex flex-col md:flex-row items-center gap-6 mt-4">
         {/* Raven */}
         <AnimatePresence mode="wait">
-          <RavenCharacter mood={mood} size="md" key={questionNumber} />
+          <RavenCharacter mood={mood} size="lg" key={questionNumber} />
         </AnimatePresence>
 
         {/* Question bubble */}

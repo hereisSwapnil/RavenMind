@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raven-mind.vercel.app/sitemap.xml

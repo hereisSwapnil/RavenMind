@@ -15,7 +15,7 @@ export const characters: Character[] = [
         description:
             "Bastard son of Eddard Stark, later revealed to be the secret heir to the Iron Throne. Former Lord Commander of the Night's Watch and King in the North.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/3/38/Jon_Snow-Kit_Harington.jpg/220px-Jon_Snow-Kit_Harington.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/3/30/Jon_Snow_Season_8.png",
         traits: {
             isFemale: false,
             isStark: true,
@@ -32,21 +32,23 @@ export const characters: Character[] = [
             hasMagic: false,
             hasRoyalBlood: true,
             isLord: true,
-            isBetrayer: false,
+            isBetrayer: true, // killed Daenerys
             survivedToEnd: true,
             isNortherner: true,
             isBeyondWall: true,
             isKing: true,
             wieldsSword: true,
             hasDirewolf: true,
-            isDead: true, // died and resurrected
+            diedAndResurrected: true,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
-            isHighborn: false,
+            isHighborn: true, // revealed as Aegon Targaryen
             isAdvisor: false,
-            lovesLittleFinger: false,
+            hasBeenMarried: false,
             hasChildren: false,
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
     {
@@ -56,7 +58,7 @@ export const characters: Character[] = [
         description:
             "The last Targaryen heir, Mother of Dragons and Breaker of Chains. She journeyed from exile to conquer the Iron Throne, commanding three dragons.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/0/0d/Daenerys_Targaryen_with_Dragon%2C_Emilia_Clarke.jpg/220px-Daenerys_Targaryen_with_Dragon%2C_Emilia_Clarke.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/0/0d/Daenerys_Targaryen_with_Dragon-Emilia_Clarke.jpg",
         traits: {
             isFemale: true,
             isStark: false,
@@ -68,7 +70,7 @@ export const characters: Character[] = [
             isGreyjoy: false,
             isBolton: false,
             isNightsWatch: false,
-            isVillain: false,
+            isVillain: true, // becomes the final villain
             isFighter: false,
             hasMagic: true,
             hasRoyalBlood: true,
@@ -80,14 +82,16 @@ export const characters: Character[] = [
             isKing: true,
             wieldsSword: false,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: true, // raised in Essos
             isMaester: false,
             isHighborn: true,
             isAdvisor: false,
-            lovesLittleFinger: false,
+            hasBeenMarried: true, // Khal Drogo, Hizdahr
             hasChildren: false,
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
     {
@@ -97,7 +101,7 @@ export const characters: Character[] = [
         description:
             "The witty and cunning youngest son of Tywin Lannister. Known as 'The Imp', he served as Hand of the King and later Hand of the Queen to Daenerys.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/5/50/Tyrion_Lannister-Peter_Dinklage.jpg/220px-Tyrion_Lannister-Peter_Dinklage.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/5/50/Tyrion_Lannister-Peter_Dinklage.jpg",
         traits: {
             isFemale: false,
             isStark: false,
@@ -114,21 +118,23 @@ export const characters: Character[] = [
             hasMagic: false,
             hasRoyalBlood: false,
             isLord: true,
-            isBetrayer: true,
+            isBetrayer: true, // killed his father, betrayed Cersei
             survivedToEnd: true,
             isNortherner: false,
             isBeyondWall: false,
             isKing: false,
             wieldsSword: false,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: true,
             isAdvisor: true,
-            lovesLittleFinger: false,
+            hasBeenMarried: true, // Tysha, Sansa
             hasChildren: false,
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
     {
@@ -138,7 +144,7 @@ export const characters: Character[] = [
         description:
             "Queen of the Seven Kingdoms, known for her fierce ambition and ruthlessness. Mother of Joffrey, Myrcella, and Tommen. Her love for her children and power drove her every decision.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Cersei_Lannister_in_s7.jpg/220px-Cersei_Lannister_in_s7.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/2/22/Cersei_Lannister_in_Black_Dress_in_Season_5.jpg",
         traits: {
             isFemale: true,
             isStark: false,
@@ -162,14 +168,16 @@ export const characters: Character[] = [
             isKing: true,
             wieldsSword: false,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: true,
             isAdvisor: false,
-            lovesLittleFinger: false,
+            hasBeenMarried: true, // Robert Baratheon
             hasChildren: true,
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
     {
@@ -179,7 +187,7 @@ export const characters: Character[] = [
         description:
             "The Kingslayer — once reviled, later redeemed. Commander of the Kingsguard, he sacrificed his sword hand and ultimately died trying to save Cersei.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Jaime_Lannister_in_s7.jpg/220px-Jaime_Lannister_in_s7.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/b/b4/Jaime_Lannister-Nikolaj_Coster-Waldau.jpg",
         traits: {
             isFemale: false,
             isStark: false,
@@ -196,21 +204,23 @@ export const characters: Character[] = [
             hasMagic: false,
             hasRoyalBlood: false,
             isLord: true,
-            isBetrayer: true,
+            isBetrayer: true, // the Kingslayer
             survivedToEnd: false,
             isNortherner: false,
             isBeyondWall: false,
             isKing: false,
             wieldsSword: true,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: true,
             isAdvisor: false,
-            lovesLittleFinger: false,
-            hasChildren: true,
+            hasBeenMarried: false, // Kingsguard, never married
+            hasChildren: true, // Joffrey, Myrcella, Tommen (secret)
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
     {
@@ -220,7 +230,7 @@ export const characters: Character[] = [
         description:
             "The fiercest of the Stark children. A trained assassin known as 'No One', she slew the Night King and countless others on her quest for revenge.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/3/36/Arya_Stark-Maisie_Williams.jpg/220px-Arya_Stark-Maisie_Williams.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/3/39/Arya_Stark-Maisie_Williams.jpg",
         traits: {
             isFemale: true,
             isStark: true,
@@ -234,7 +244,7 @@ export const characters: Character[] = [
             isNightsWatch: false,
             isVillain: false,
             isFighter: true,
-            hasMagic: true,
+            hasMagic: true, // Faceless Men abilities
             hasRoyalBlood: false,
             isLord: false,
             isBetrayer: false,
@@ -244,14 +254,16 @@ export const characters: Character[] = [
             isKing: false,
             wieldsSword: true,
             hasDirewolf: true,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: true,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: true,
             isAdvisor: false,
-            lovesLittleFinger: false,
+            hasBeenMarried: false,
             hasChildren: false,
+            isReligious: true, // Many-Faced God
+            isOlderGeneration: false,
         },
     },
     {
@@ -261,7 +273,7 @@ export const characters: Character[] = [
         description:
             "Once a naive girl dreaming of knights and kings, Sansa became a shrewd political player who rose to become Queen in the North after enduring profound hardship.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Sansa_Stark_in_s7.jpg/220px-Sansa_Stark_in_s7.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/7/74/SophieTurnerasSansaStark.jpg",
         traits: {
             isFemale: true,
             isStark: true,
@@ -282,17 +294,19 @@ export const characters: Character[] = [
             survivedToEnd: true,
             isNortherner: true,
             isBeyondWall: false,
-            isKing: true,
+            isKing: true, // Queen in the North
             wieldsSword: false,
             hasDirewolf: true,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: true,
-            isAdvisor: true,
-            lovesLittleFinger: false,
+            isAdvisor: false,
+            hasBeenMarried: true, // Tyrion, Ramsay
             hasChildren: false,
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
     {
@@ -302,7 +316,7 @@ export const characters: Character[] = [
         description:
             "The honourable Lord of Winterfell and Warden of the North. His death at King's Landing set the War of the Five Kings into motion.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/6/69/Ned_Stark-Sean_Bean.jpg/220px-Ned_Stark-Sean_Bean.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/5/52/Ned_Stark-Sean_Bean.jpg",
         traits: {
             isFemale: false,
             isStark: true,
@@ -326,14 +340,16 @@ export const characters: Character[] = [
             isKing: false,
             wieldsSword: true,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: true,
-            isAdvisor: true,
-            lovesLittleFinger: false,
+            isAdvisor: true, // Hand of the King
+            hasBeenMarried: true, // Catelyn
             hasChildren: true,
+            isReligious: false,
+            isOlderGeneration: true,
         },
     },
     {
@@ -343,7 +359,7 @@ export const characters: Character[] = [
         description:
             "The Three-Eyed Raven — a crippled boy who became the most powerful greenseer in the world and ultimately its ruler, King of the Six Kingdoms.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Bran_Stark_S8.jpg/220px-Bran_Stark_S8.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/f/fa/Bran_Stark_-_Isaac_Hempstead-Wright.jpeg",
         traits: {
             isFemale: false,
             isStark: true,
@@ -367,14 +383,16 @@ export const characters: Character[] = [
             isKing: true,
             wieldsSword: false,
             hasDirewolf: true,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: true,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: true,
             isAdvisor: false,
-            lovesLittleFinger: false,
+            hasBeenMarried: false,
             hasChildren: false,
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
     {
@@ -384,7 +402,7 @@ export const characters: Character[] = [
         description:
             "Known as 'The Hound', he was a brutal warrior scarred by fire, who gradually softened after travelling with Arya Stark. Died fighting his brother, The Mountain.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/5/50/Sandor_Clegane.jpg/220px-Sandor_Clegane.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/5/59/The_Hound_in_%27The_Children%27.jpg",
         traits: {
             isFemale: false,
             isStark: false,
@@ -404,18 +422,20 @@ export const characters: Character[] = [
             isBetrayer: false,
             survivedToEnd: false,
             isNortherner: false,
-            isBeyondWall: false,
+            isBeyondWall: true, // went beyond Wall in S7
             isKing: false,
             wieldsSword: true,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: false,
             isAdvisor: false,
-            lovesLittleFinger: false,
+            hasBeenMarried: false,
             hasChildren: false,
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
     {
@@ -425,13 +445,13 @@ export const characters: Character[] = [
         description:
             "The sadistic boy-king who ordered the execution of Ned Stark. Poisoned at his own wedding by Olenna Tyrell and Petyr Baelish.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Joffrey_Baratheon.jpg/220px-Joffrey_Baratheon.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/b/bd/Joffrey_Baratheon-Jack_Gleeson.jpg",
         traits: {
             isFemale: false,
             isStark: false,
             isLannister: true,
             isTargaryen: false,
-            isBaratheon: true,
+            isBaratheon: true, // raised as Baratheon
             isTyrell: false,
             isMartell: false,
             isGreyjoy: false,
@@ -440,7 +460,7 @@ export const characters: Character[] = [
             isVillain: true,
             isFighter: false,
             hasMagic: false,
-            hasRoyalBlood: true,
+            hasRoyalBlood: false, // actually no Baratheon blood
             isLord: true,
             isBetrayer: false,
             survivedToEnd: false,
@@ -449,14 +469,16 @@ export const characters: Character[] = [
             isKing: true,
             wieldsSword: false,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: true,
             isAdvisor: false,
-            lovesLittleFinger: false,
+            hasBeenMarried: true, // married Margaery (died at wedding)
             hasChildren: false,
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
     {
@@ -466,7 +488,7 @@ export const characters: Character[] = [
         description:
             "Known as 'Littlefinger', the cunning Master of Coin who manipulated almost every great house. He was ultimately exposed and executed by Arya Stark.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/Petyr_Baelish.jpg/220px-Petyr_Baelish.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/d/d5/Aidan_Gillen_playing_Petyr_Baelish.jpg",
         traits: {
             isFemale: false,
             isStark: false,
@@ -490,14 +512,16 @@ export const characters: Character[] = [
             isKing: false,
             wieldsSword: false,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: true,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: false,
             isAdvisor: true,
-            lovesLittleFinger: false,
+            hasBeenMarried: true, // Lysa Arryn
             hasChildren: false,
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
     {
@@ -507,7 +531,7 @@ export const characters: Character[] = [
         description:
             "The Spider — Master of Whisperers and keeper of secrets across the realm. He served many kings until his loyalty to 'the realm' led Daenerys to execute him.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/0/00/Lord_Varys.jpg/220px-Lord_Varys.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/0/01/Varys-Conleth_Hill.jpg",
         traits: {
             isFemale: false,
             isStark: false,
@@ -531,14 +555,16 @@ export const characters: Character[] = [
             isKing: false,
             wieldsSword: false,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: false,
-            isSpy: true,
+            isFromEssos: true,
             isMaester: false,
             isHighborn: false,
             isAdvisor: true,
-            lovesLittleFinger: false,
+            hasBeenMarried: false,
             hasChildren: false,
+            isReligious: false,
+            isOlderGeneration: true,
         },
     },
     {
@@ -548,7 +574,7 @@ export const characters: Character[] = [
         description:
             "The Red Priestess of R'hllor, hundreds of years old despite appearing young. She resurrected Jon Snow and sacrificed Shireen Baratheon. She died after the Long Night.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Melisandre_%28Carice_van_Houten%29.jpg/220px-Melisandre_%28Carice_van_Houten%29.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/8/80/Melisandre-Carice_van_Houten.jpg",
         traits: {
             isFemale: true,
             isStark: false,
@@ -572,14 +598,16 @@ export const characters: Character[] = [
             isKing: false,
             wieldsSword: false,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: false,
-            isSpy: false,
+            isFromEssos: true,
             isMaester: false,
             isHighborn: false,
             isAdvisor: true,
-            lovesLittleFinger: false,
+            hasBeenMarried: false,
             hasChildren: false,
+            isReligious: true,
+            isOlderGeneration: true,
         },
     },
     {
@@ -589,7 +617,7 @@ export const characters: Character[] = [
         description:
             "The Onion Knight — a former smuggler turned loyal knight of Stannis Baratheon and later advisor to Jon Snow. Known for his steadfast honour and practical wisdom.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/3/36/Davos_Seaworth.jpg/220px-Davos_Seaworth.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/9/98/Davos_Seaworth_Sitting_Liam_Cunningham.jpg",
         traits: {
             isFemale: false,
             isStark: false,
@@ -613,14 +641,16 @@ export const characters: Character[] = [
             isKing: false,
             wieldsSword: false,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: false,
             isAdvisor: true,
-            lovesLittleFinger: false,
+            hasBeenMarried: true,
             hasChildren: true,
+            isReligious: false,
+            isOlderGeneration: true,
         },
     },
     {
@@ -630,7 +660,7 @@ export const characters: Character[] = [
         description:
             "The most formidable female knight in Westeros. Sworn to protect the Stark girls, she defeated the Hound and eventually served as Lord Commander of the Kingsguard.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/Brienne_of_tarth_s7.jpg/220px-Brienne_of_tarth_s7.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/9/93/Brienne_of_Tarth-Gwendoline_Christie.jpg",
         traits: {
             isFemale: true,
             isStark: false,
@@ -654,14 +684,16 @@ export const characters: Character[] = [
             isKing: false,
             wieldsSword: true,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: true,
             isAdvisor: false,
-            lovesLittleFinger: false,
+            hasBeenMarried: false,
             hasChildren: false,
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
     {
@@ -671,7 +703,7 @@ export const characters: Character[] = [
         description:
             "A fearless wildling leader and ally of Jon Snow, known for his fierce warrior nature, boisterous personality, and unrequited love for Brienne of Tarth.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/c/c0/Tormund_Giantsbane.jpg/220px-Tormund_Giantsbane.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/2/29/Tormund_Giantsbane_Profile_Kristopher_Hivju.jpg",
         traits: {
             isFemale: false,
             isStark: false,
@@ -693,16 +725,18 @@ export const characters: Character[] = [
             isNortherner: true,
             isBeyondWall: true,
             isKing: false,
-            wieldsSword: false,
+            wieldsSword: true, // fights with various weapons
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: false,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: false,
             isAdvisor: false,
-            lovesLittleFinger: false,
-            hasChildren: false,
+            hasBeenMarried: false,
+            hasChildren: true, // mentions daughters
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
     {
@@ -712,7 +746,7 @@ export const characters: Character[] = [
         description:
             "Jon Snow's best friend and a reluctant member of the Night's Watch who became an unlikely hero, discovering the secret to defeating White Walkers and becoming Grand Maester.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Samwell_Tarly.jpg/220px-Samwell_Tarly.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/4/4d/Samwell_Tarly-John_Bradley.jpg",
         traits: {
             isFemale: false,
             isStark: false,
@@ -736,14 +770,16 @@ export const characters: Character[] = [
             isKing: false,
             wieldsSword: false,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: true,
             isHighborn: true,
             isAdvisor: true,
-            lovesLittleFinger: false,
-            hasChildren: false,
+            hasBeenMarried: false,
+            hasChildren: true, // Little Sam (adopted)
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
     {
@@ -753,7 +789,7 @@ export const characters: Character[] = [
         description:
             "A fierce wildling woman and skilled archer who fell in love with Jon Snow. She famously reminded him he 'knows nothing'.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/Ygritte.jpg/220px-Ygritte.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/4/4e/Ygritte.jpg",
         traits: {
             isFemale: true,
             isStark: false,
@@ -777,14 +813,16 @@ export const characters: Character[] = [
             isKing: false,
             wieldsSword: false,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: false,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: false,
             isAdvisor: false,
-            lovesLittleFinger: false,
+            hasBeenMarried: false,
             hasChildren: false,
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
     {
@@ -794,7 +832,7 @@ export const characters: Character[] = [
         description:
             "The Red Viper of Dorne — a flamboyant, deadly prince who sought justice for his sister's murder. He was killed by the Mountain during a trial by combat.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/2/2e/Oberyn_Martell.jpg/220px-Oberyn_Martell.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/a/ac/Oberyn_Martell-Pedro_Pascal.jpg",
         traits: {
             isFemale: false,
             isStark: false,
@@ -816,16 +854,18 @@ export const characters: Character[] = [
             isNortherner: false,
             isBeyondWall: false,
             isKing: false,
-            wieldsSword: false,
+            wieldsSword: false, // uses spear
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: true,
             isAdvisor: false,
-            lovesLittleFinger: false,
-            hasChildren: true,
+            hasBeenMarried: false,
+            hasChildren: true, // Sand Snakes
+            isReligious: false,
+            isOlderGeneration: true,
         },
     },
     {
@@ -833,9 +873,9 @@ export const characters: Character[] = [
         name: "Grey Worm",
         house: "Unsullied",
         description:
-            "Commander of the Unsullied, Daenerys's elite soldier army. A freed slave who became one of the most formidable military leaders in Essos.",
+            "Commander of the Unsullied, Daenerys's elite soldier army. A freed slave who became one of the most formidable military leaders in Essos and Westeros.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/7/72/Grey_Worm.jpg/220px-Grey_Worm.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/7/72/Grey_Worm.jpg",
         traits: {
             isFemale: false,
             isStark: false,
@@ -859,14 +899,16 @@ export const characters: Character[] = [
             isKing: false,
             wieldsSword: true,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: false,
-            isSpy: false,
+            isFromEssos: true,
             isMaester: false,
             isHighborn: false,
             isAdvisor: false,
-            lovesLittleFinger: false,
+            hasBeenMarried: false,
             hasChildren: false,
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
     {
@@ -876,7 +918,7 @@ export const characters: Character[] = [
         description:
             "A disgraced knight exiled from Westeros who devoted his life to protecting Daenerys Targaryen. He died in the Battle of Winterfell saving her.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Jorah_Mormont.jpg/220px-Jorah_Mormont.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Ian_glen.JPG/500px-Ian_glen.JPG",
         traits: {
             isFemale: false,
             isStark: false,
@@ -893,21 +935,23 @@ export const characters: Character[] = [
             hasMagic: false,
             hasRoyalBlood: false,
             isLord: true,
-            isBetrayer: true,
+            isBetrayer: true, // originally spied on Daenerys
             survivedToEnd: false,
             isNortherner: true,
             isBeyondWall: false,
             isKing: false,
             wieldsSword: true,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: true,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: true,
             isAdvisor: true,
-            lovesLittleFinger: false,
+            hasBeenMarried: true,
             hasChildren: false,
+            isReligious: false,
+            isOlderGeneration: true,
         },
     },
     {
@@ -917,7 +961,7 @@ export const characters: Character[] = [
         description:
             "Ward of the Starks turned traitor, then broken by Ramsay Bolton as 'Reek', Theon redeemed himself by dying to protect Bran from the Night King.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/Theon_Greyjoy.jpg/220px-Theon_Greyjoy.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/5/51/Theon_Greyjoy-Alfie_Allen.jpg",
         traits: {
             isFemale: false,
             isStark: false,
@@ -934,21 +978,23 @@ export const characters: Character[] = [
             hasMagic: false,
             hasRoyalBlood: true,
             isLord: true,
-            isBetrayer: true,
+            isBetrayer: true, // betrayed the Starks
             survivedToEnd: false,
             isNortherner: false,
             isBeyondWall: false,
             isKing: false,
-            wieldsSword: false,
+            wieldsSword: true,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: true,
             isAdvisor: false,
-            lovesLittleFinger: false,
+            hasBeenMarried: false,
             hasChildren: false,
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
     {
@@ -958,7 +1004,7 @@ export const characters: Character[] = [
         description:
             "The sadistic bastard (later legitimized) son of Roose Bolton. He tortured Theon Greyjoy into 'Reek' and was ultimately fed to his own hounds by Sansa.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/e/e2/Ramsay_Bolton.jpg/220px-Ramsay_Bolton.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/5/5e/Ramsay_Bolton-_-Iwan_Rheon.jpg",
         traits: {
             isFemale: false,
             isStark: false,
@@ -975,21 +1021,23 @@ export const characters: Character[] = [
             hasMagic: false,
             hasRoyalBlood: false,
             isLord: true,
-            isBetrayer: true,
+            isBetrayer: true, // killed his own father
             survivedToEnd: false,
             isNortherner: true,
             isBeyondWall: false,
             isKing: false,
             wieldsSword: true,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
-            isHighborn: false,
+            isHighborn: false, // bastard
             isAdvisor: false,
-            lovesLittleFinger: false,
+            hasBeenMarried: true, // Sansa (forced)
             hasChildren: false,
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
     {
@@ -999,7 +1047,7 @@ export const characters: Character[] = [
         description:
             "A skilled political manipulator with a warm public persona, she married three kings and worked to secure power for the Tyrell family before dying in the Sept explosion.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/Margaery_Tyrell.jpg/220px-Margaery_Tyrell.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/3/37/Margaery_Tyrell_in_the_Gardens.jpg",
         traits: {
             isFemale: true,
             isStark: false,
@@ -1020,17 +1068,19 @@ export const characters: Character[] = [
             survivedToEnd: false,
             isNortherner: false,
             isBeyondWall: false,
-            isKing: true,
+            isKing: true, // Queen
             wieldsSword: false,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: true,
             isAdvisor: false,
-            lovesLittleFinger: false,
+            hasBeenMarried: true, // Renly, Joffrey, Tommen
             hasChildren: false,
+            isReligious: true, // devoted to the Faith (at least outwardly)
+            isOlderGeneration: false,
         },
     },
     {
@@ -1040,7 +1090,7 @@ export const characters: Character[] = [
         description:
             "The Queen of Thorns — the sharp-tongued, ruthlessly practical matriarch of House Tyrell. She poisoned Joffrey and told Jaime the truth before dying.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/Olenna_Tyrell.jpg/220px-Olenna_Tyrell.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/d/da/Olenna_Tyrell-Diana_Rigg.jpg",
         traits: {
             isFemale: true,
             isStark: false,
@@ -1057,21 +1107,23 @@ export const characters: Character[] = [
             hasMagic: false,
             hasRoyalBlood: false,
             isLord: true,
-            isBetrayer: false,
+            isBetrayer: true, // poisoned Joffrey
             survivedToEnd: false,
             isNortherner: false,
             isBeyondWall: false,
             isKing: false,
             wieldsSword: false,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: true,
             isAdvisor: true,
-            lovesLittleFinger: false,
+            hasBeenMarried: true,
             hasChildren: true,
+            isReligious: false,
+            isOlderGeneration: true,
         },
     },
     {
@@ -1081,7 +1133,7 @@ export const characters: Character[] = [
         description:
             "The rightful heir to the Iron Throne according to law. He was stern, inflexible, and relentless in his claim, sacrificing his own daughter before being defeated by the Boltons.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/3/3d/Stannis_Baratheon.jpg/220px-Stannis_Baratheon.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/0/0f/King_Stannis_Baratheon_Profile_Picture_Down_Facing.jpeg",
         traits: {
             isFemale: false,
             isStark: false,
@@ -1105,14 +1157,16 @@ export const characters: Character[] = [
             isKing: true,
             wieldsSword: true,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: true,
             isAdvisor: false,
-            lovesLittleFinger: false,
-            hasChildren: true,
+            hasBeenMarried: true,
+            hasChildren: true, // Shireen
+            isReligious: true, // R'hllor convert
+            isOlderGeneration: true,
         },
     },
     {
@@ -1120,9 +1174,9 @@ export const characters: Character[] = [
         name: "Catelyn Stark",
         house: "Stark / Tully",
         description:
-            "The devoted but fierce mother of the Stark children. Lady of Winterfell who was murdered at the Red Wedding and briefly rose as the vengeful Lady Stoneheart.",
+            "The devoted but fierce mother of the Stark children. Lady of Winterfell who was murdered at the Red Wedding alongside her son Robb.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Catelyn_stark.jpg/220px-Catelyn_stark.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/3/3c/Michelle_Fairley_Cat_Stark_in_the_Vale.png",
         traits: {
             isFemale: true,
             isStark: true,
@@ -1141,60 +1195,21 @@ export const characters: Character[] = [
             isLord: true,
             isBetrayer: false,
             survivedToEnd: false,
-            isNortherner: true,
+            isNortherner: false, // born a Tully of the Riverlands
             isBeyondWall: false,
             isKing: false,
             wieldsSword: false,
             hasDirewolf: false,
-            isDead: true,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: true,
-            isAdvisor: false,
-            lovesLittleFinger: false,
+            isAdvisor: true, // advised Robb
+            hasBeenMarried: true,
             hasChildren: true,
-        },
-    },
-    {
-        id: "lyanna_mormont",
-        name: "Lyanna Mormont",
-        house: "Mormont",
-        description:
-            "The fierce, no-nonsense child Lady of Bear Island who named Jon Snow King in the North — and died heroically crushing a giant wight at the Battle of Winterfell.",
-        image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/7/72/Lyanna_Mormont.jpg/220px-Lyanna_Mormont.jpg",
-        traits: {
-            isFemale: true,
-            isStark: false,
-            isLannister: false,
-            isTargaryen: false,
-            isBaratheon: false,
-            isTyrell: false,
-            isMartell: false,
-            isGreyjoy: false,
-            isBolton: false,
-            isNightsWatch: false,
-            isVillain: false,
-            isFighter: false,
-            hasMagic: false,
-            hasRoyalBlood: false,
-            isLord: true,
-            isBetrayer: false,
-            survivedToEnd: false,
-            isNortherner: true,
-            isBeyondWall: false,
-            isKing: false,
-            wieldsSword: false,
-            hasDirewolf: false,
-            isDead: false,
-            isWesterosi: true,
-            isSpy: false,
-            isMaester: false,
-            isHighborn: true,
-            isAdvisor: false,
-            lovesLittleFinger: false,
-            hasChildren: false,
+            isReligious: true, // devout follower of the Seven
+            isOlderGeneration: true,
         },
     },
     {
@@ -1204,7 +1219,7 @@ export const characters: Character[] = [
         description:
             "The Young Wolf — King in the North who won every battle but lost the war, betrayed and murdered at the infamous Red Wedding.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Robb_Stark-Richard_Madden.jpg/220px-Robb_Stark-Richard_Madden.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/c/ce/Robb_Stark-Richard_Madden.jpg",
         traits: {
             isFemale: false,
             isStark: true,
@@ -1228,14 +1243,16 @@ export const characters: Character[] = [
             isKing: true,
             wieldsSword: true,
             hasDirewolf: true,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: true,
             isAdvisor: false,
-            lovesLittleFinger: false,
+            hasBeenMarried: true, // Talisa
             hasChildren: false,
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
     {
@@ -1245,7 +1262,7 @@ export const characters: Character[] = [
         description:
             "The bastard son of King Robert Baratheon, a talented blacksmith who eventually was legitimized as Gendry Baratheon, Lord of Storm's End.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Gendry_S8.jpg/220px-Gendry_S8.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/9/9b/Gendry-Joe_Dempsie.jpg",
         traits: {
             isFemale: false,
             isStark: false,
@@ -1267,19 +1284,20 @@ export const characters: Character[] = [
             isNortherner: false,
             isBeyondWall: true,
             isKing: false,
-            wieldsSword: false,
+            wieldsSword: false, // warhammer
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
-            isHighborn: false,
+            isHighborn: false, // bastard raised lowborn
             isAdvisor: false,
-            lovesLittleFinger: false,
+            hasBeenMarried: false,
             hasChildren: false,
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
-    // ── Additional characters from the official cast list ──────────────────
     {
         id: "robert_baratheon",
         name: "Robert Baratheon",
@@ -1287,7 +1305,7 @@ export const characters: Character[] = [
         description:
             "The warrior-king who overthrew the Mad King Aerys and sat the Iron Throne. Known for his legendary prowess in battle and warhammer, he died in a hunting 'accident' orchestrated by the Lannisters.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/b/b0/Robert_Baratheon_Mark_Addy.jpg/220px-Robert_Baratheon_Mark_Addy.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/0/06/Robert_Baratheon_Profile_Mark_Addy.jpg",
         traits: {
             isFemale: false,
             isStark: false,
@@ -1309,139 +1327,18 @@ export const characters: Character[] = [
             isNortherner: false,
             isBeyondWall: false,
             isKing: true,
-            wieldsSword: false,
+            wieldsSword: false, // warhammer
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: true,
             isAdvisor: false,
-            lovesLittleFinger: false,
+            hasBeenMarried: true,
             hasChildren: true,
-        },
-    },
-    {
-        id: "viserys",
-        name: "Viserys Targaryen",
-        house: "Targaryen",
-        description:
-            "Daenerys's cruel elder brother, self-styled 'The Dragon'. He sold his sister to Khal Drogo in exchange for an army and was killed when the Khal poured molten gold on his head.",
-        image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/d/dc/Viserys_Targaryen_Harry_Lloyd.jpg/220px-Viserys_Targaryen_Harry_Lloyd.jpg",
-        traits: {
-            isFemale: false,
-            isStark: false,
-            isLannister: false,
-            isTargaryen: true,
-            isBaratheon: false,
-            isTyrell: false,
-            isMartell: false,
-            isGreyjoy: false,
-            isBolton: false,
-            isNightsWatch: false,
-            isVillain: true,
-            isFighter: false,
-            hasMagic: false,
-            hasRoyalBlood: true,
-            isLord: true,
-            isBetrayer: false,
-            survivedToEnd: false,
-            isNortherner: false,
-            isBeyondWall: false,
-            isKing: false,
-            wieldsSword: false,
-            hasDirewolf: false,
-            isDead: false,
-            isWesterosi: true,
-            isSpy: false,
-            isMaester: false,
-            isHighborn: true,
-            isAdvisor: false,
-            lovesLittleFinger: false,
-            hasChildren: false,
-        },
-    },
-    {
-        id: "khal_drogo",
-        name: "Khal Drogo",
-        house: "Dothraki",
-        description:
-            "The fearsome Dothraki warlord and husband of Daenerys. Undefeated in battle, he was brought low by an infected wound and killed by Daenerys with a pillow before he fell into a vegetative state.",
-        image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Khal_Drogo.jpg/220px-Khal_Drogo.jpg",
-        traits: {
-            isFemale: false,
-            isStark: false,
-            isLannister: false,
-            isTargaryen: false,
-            isBaratheon: false,
-            isTyrell: false,
-            isMartell: false,
-            isGreyjoy: false,
-            isBolton: false,
-            isNightsWatch: false,
-            isVillain: false,
-            isFighter: true,
-            hasMagic: false,
-            hasRoyalBlood: false,
-            isLord: false,
-            isBetrayer: false,
-            survivedToEnd: false,
-            isNortherner: false,
-            isBeyondWall: false,
-            isKing: true,
-            wieldsSword: false,
-            hasDirewolf: false,
-            isDead: false,
-            isWesterosi: false,
-            isSpy: false,
-            isMaester: false,
-            isHighborn: false,
-            isAdvisor: false,
-            lovesLittleFinger: false,
-            hasChildren: false,
-        },
-    },
-    {
-        id: "jeor_mormont",
-        name: "Jeor Mormont",
-        house: "Mormont",
-        description:
-            "The Old Bear — Lord Commander of the Night's Watch who mentored Jon Snow. He was murdered by his own men during the mutiny at Craster's Keep.",
-        image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Jeor_Mormont.jpg/220px-Jeor_Mormont.jpg",
-        traits: {
-            isFemale: false,
-            isStark: false,
-            isLannister: false,
-            isTargaryen: false,
-            isBaratheon: false,
-            isTyrell: false,
-            isMartell: false,
-            isGreyjoy: false,
-            isBolton: false,
-            isNightsWatch: true,
-            isVillain: false,
-            isFighter: true,
-            hasMagic: false,
-            hasRoyalBlood: false,
-            isLord: true,
-            isBetrayer: false,
-            survivedToEnd: false,
-            isNortherner: true,
-            isBeyondWall: true,
-            isKing: false,
-            wieldsSword: true,
-            hasDirewolf: false,
-            isDead: false,
-            isWesterosi: true,
-            isSpy: false,
-            isMaester: false,
-            isHighborn: true,
-            isAdvisor: false,
-            lovesLittleFinger: false,
-            hasChildren: true,
+            isReligious: false,
+            isOlderGeneration: true,
         },
     },
     {
@@ -1449,9 +1346,9 @@ export const characters: Character[] = [
         name: "Bronn",
         house: "None",
         description:
-            "A sell-sword of low birth who rose through cunning and skill to become Tyrion's champion, then Jaime's companion. He survived to become Lord of Highgarden and Master of Coin.",
+            "A sellsword of low birth who rose through cunning and skill to become Tyrion's champion, then Jaime's companion. He survived to become Lord of Highgarden and Master of Coin.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/2/21/Bronn_GOT.jpg/220px-Bronn_GOT.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/2/21/Bronn_GOT.jpg",
         traits: {
             isFemale: false,
             isStark: false,
@@ -1467,7 +1364,7 @@ export const characters: Character[] = [
             isFighter: true,
             hasMagic: false,
             hasRoyalBlood: false,
-            isLord: true,
+            isLord: true, // Lord of Highgarden
             isBetrayer: false,
             survivedToEnd: true,
             isNortherner: false,
@@ -1475,26 +1372,28 @@ export const characters: Character[] = [
             isKing: false,
             wieldsSword: true,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: false,
-            isAdvisor: true,
-            lovesLittleFinger: false,
+            isAdvisor: true, // Master of Coin
+            hasBeenMarried: false,
             hasChildren: false,
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
     {
-        id: "shae",
-        name: "Shae",
-        house: "None",
+        id: "khal_drogo",
+        name: "Khal Drogo",
+        house: "Dothraki",
         description:
-            "A foreign prostitute who became Tyrion Lannister's lover and confidante. She ultimately betrayed him by testifying against him at trial, and was strangled by Tyrion after he found her in his father's bed.",
+            "The fearsome Dothraki warlord and husband of Daenerys. Undefeated in battle, he was brought low by an infected wound and mercy-killed by Daenerys.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Shae_GOT.jpg/220px-Shae_GOT.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/0/0e/Khal_Drogo.jpg",
         traits: {
-            isFemale: true,
+            isFemale: false,
             isStark: false,
             isLannister: false,
             isTargaryen: false,
@@ -1505,25 +1404,27 @@ export const characters: Character[] = [
             isBolton: false,
             isNightsWatch: false,
             isVillain: false,
-            isFighter: false,
+            isFighter: true,
             hasMagic: false,
             hasRoyalBlood: false,
             isLord: false,
-            isBetrayer: true,
+            isBetrayer: false,
             survivedToEnd: false,
             isNortherner: false,
             isBeyondWall: false,
-            isKing: false,
-            wieldsSword: false,
+            isKing: true, // Khal = king
+            wieldsSword: false, // arakh
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: false,
-            isSpy: false,
+            isFromEssos: true,
             isMaester: false,
             isHighborn: false,
             isAdvisor: false,
-            lovesLittleFinger: false,
-            hasChildren: false,
+            hasBeenMarried: true,
+            hasChildren: false, // Rhaego was stillborn
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
     {
@@ -1533,7 +1434,7 @@ export const characters: Character[] = [
         description:
             "The patriarch of House Lannister and the most powerful lord in Westeros. He served as Hand of the King and masterminded the Red Wedding. He was killed by his son Tyrion on the privy.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/Tywin_Lannister.jpg/220px-Tywin_Lannister.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/b/b9/Tywin_Lannister_Profile_Charles_Dance.jpg",
         traits: {
             isFemale: false,
             isStark: false,
@@ -1550,21 +1451,23 @@ export const characters: Character[] = [
             hasMagic: false,
             hasRoyalBlood: false,
             isLord: true,
-            isBetrayer: false,
+            isBetrayer: true, // sacked King's Landing, Red Wedding
             survivedToEnd: false,
             isNortherner: false,
             isBeyondWall: false,
             isKing: false,
             wieldsSword: false,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: true,
-            isAdvisor: true,
-            lovesLittleFinger: false,
+            isAdvisor: true, // Hand of the King
+            hasBeenMarried: true,
             hasChildren: true,
+            isReligious: false,
+            isOlderGeneration: true,
         },
     },
     {
@@ -1574,7 +1477,7 @@ export const characters: Character[] = [
         description:
             "A noblewoman from Volantis who became a battlefield healer. She married Robb Stark and was pregnant with his child when she was slaughtered at the Red Wedding.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/b/b5/Talisa_Stark.jpg/220px-Talisa_Stark.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Oona_Chaplin_2016.jpg/330px-Oona_Chaplin_2016.jpg",
         traits: {
             isFemale: true,
             isStark: false,
@@ -1598,55 +1501,16 @@ export const characters: Character[] = [
             isKing: false,
             wieldsSword: false,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: false,
-            isSpy: false,
+            isFromEssos: true,
             isMaester: false,
             isHighborn: true,
             isAdvisor: false,
-            lovesLittleFinger: false,
+            hasBeenMarried: true,
             hasChildren: false,
-        },
-    },
-    {
-        id: "gilly",
-        name: "Gilly",
-        house: "None",
-        description:
-            "A wildling woman born as one of Craster's daughters-wives beyond the Wall. She escaped with Samwell Tarly and eventually made a life at Horn Hill and the Citadel.",
-        image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Gilly_GOT.jpg/220px-Gilly_GOT.jpg",
-        traits: {
-            isFemale: true,
-            isStark: false,
-            isLannister: false,
-            isTargaryen: false,
-            isBaratheon: false,
-            isTyrell: false,
-            isMartell: false,
-            isGreyjoy: false,
-            isBolton: false,
-            isNightsWatch: false,
-            isVillain: false,
-            isFighter: false,
-            hasMagic: false,
-            hasRoyalBlood: false,
-            isLord: false,
-            isBetrayer: false,
-            survivedToEnd: true,
-            isNortherner: false,
-            isBeyondWall: true,
-            isKing: false,
-            wieldsSword: false,
-            hasDirewolf: false,
-            isDead: false,
-            isWesterosi: false,
-            isSpy: false,
-            isMaester: false,
-            isHighborn: false,
-            isAdvisor: false,
-            lovesLittleFinger: false,
-            hasChildren: true,
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
     {
@@ -1656,7 +1520,7 @@ export const characters: Character[] = [
         description:
             "A cocky Tyroshi sellsword and commander of the Second Sons. He became Daenerys's lover and was left behind to keep the peace in Meereen when she sailed for Westeros.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Daario_Naharis.jpg/220px-Daario_Naharis.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/e/e9/Michiel_Huisman_as_Daario_Naharis.jpg",
         traits: {
             isFemale: false,
             isStark: false,
@@ -1680,14 +1544,16 @@ export const characters: Character[] = [
             isKing: false,
             wieldsSword: true,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: false,
-            isSpy: false,
+            isFromEssos: true,
             isMaester: false,
             isHighborn: false,
             isAdvisor: false,
-            lovesLittleFinger: false,
+            hasBeenMarried: false,
             hasChildren: false,
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
     {
@@ -1697,7 +1563,7 @@ export const characters: Character[] = [
         description:
             "A freed slave from the Isle of Naath who served as Daenerys's trusted translator and advisor. She was captured by Cersei and beheaded before the walls of King's Landing.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/0/09/Missandei_GOT.jpg/220px-Missandei_GOT.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/5/57/Missandie_Blue_Dress_Nathalie_Emmanuel.png",
         traits: {
             isFemale: true,
             isStark: false,
@@ -1721,14 +1587,16 @@ export const characters: Character[] = [
             isKing: false,
             wieldsSword: false,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: false,
-            isSpy: false,
+            isFromEssos: true,
             isMaester: false,
             isHighborn: false,
             isAdvisor: true,
-            lovesLittleFinger: false,
+            hasBeenMarried: false,
             hasChildren: false,
+            isReligious: false,
+            isOlderGeneration: false,
         },
     },
     {
@@ -1738,7 +1606,7 @@ export const characters: Character[] = [
         description:
             "The gentle, easily-manipulated boy-king who succeeded Joffrey. Under the influence of Margaery and the High Sparrow, he was unable to prevent the Sept explosion and jumped from his window.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Tommen_Baratheon.jpg/220px-Tommen_Baratheon.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/e/e5/Tommen_Baratheon-Dean-Charles_Chapman.jpg",
         traits: {
             isFemale: false,
             isStark: false,
@@ -1753,7 +1621,7 @@ export const characters: Character[] = [
             isVillain: false,
             isFighter: false,
             hasMagic: false,
-            hasRoyalBlood: true,
+            hasRoyalBlood: false,
             isLord: true,
             isBetrayer: false,
             survivedToEnd: false,
@@ -1762,14 +1630,16 @@ export const characters: Character[] = [
             isKing: true,
             wieldsSword: false,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: true,
             isAdvisor: false,
-            lovesLittleFinger: false,
+            hasBeenMarried: true, // Margaery
             hasChildren: false,
+            isReligious: true, // converted to the Faith
+            isOlderGeneration: false,
         },
     },
     {
@@ -1779,7 +1649,7 @@ export const characters: Character[] = [
         description:
             "The paramour of Oberyn Martell and mother of the Sand Snakes. Driven by vengeance for Oberyn's death, she poisoned Myrcella and eventually seized control of Dorne.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/0/02/Ellaria_Sand.jpg/220px-Ellaria_Sand.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/8/85/Ellaria_Sand.jpg",
         traits: {
             isFemale: true,
             isStark: false,
@@ -1803,55 +1673,16 @@ export const characters: Character[] = [
             isKing: false,
             wieldsSword: false,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: false,
             isAdvisor: false,
-            lovesLittleFinger: false,
+            hasBeenMarried: false,
             hasChildren: true,
-        },
-    },
-    {
-        id: "jaqen_hghar",
-        name: "Jaqen H'ghar",
-        house: "Faceless Men",
-        description:
-            "A mysterious servant of the Many-Faced God and member of the Faceless Men of Braavos. He trained Arya Stark in the art of assassination and can change his face at will.",
-        image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/f/f7/Jaqen_H%27ghar.jpg/220px-Jaqen_H%27ghar.jpg",
-        traits: {
-            isFemale: false,
-            isStark: false,
-            isLannister: false,
-            isTargaryen: false,
-            isBaratheon: false,
-            isTyrell: false,
-            isMartell: false,
-            isGreyjoy: false,
-            isBolton: false,
-            isNightsWatch: false,
-            isVillain: false,
-            isFighter: true,
-            hasMagic: true,
-            hasRoyalBlood: false,
-            isLord: false,
-            isBetrayer: false,
-            survivedToEnd: true,
-            isNortherner: false,
-            isBeyondWall: false,
-            isKing: false,
-            wieldsSword: true,
-            hasDirewolf: false,
-            isDead: false,
-            isWesterosi: false,
-            isSpy: true,
-            isMaester: false,
-            isHighborn: false,
-            isAdvisor: false,
-            lovesLittleFinger: false,
-            hasChildren: false,
+            isReligious: false,
+            isOlderGeneration: true,
         },
     },
     {
@@ -1861,7 +1692,7 @@ export const characters: Character[] = [
         description:
             "The cold, calculating Warden of the North who betrayed Robb Stark at the Red Wedding and was rewarded with lordship of the North. He was eventually murdered by his own son Ramsay.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/Roose_Bolton.jpg/220px-Roose_Bolton.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/6/69/Roose_Bolton_Profile_in_the_Snow.jpg",
         traits: {
             isFemale: false,
             isStark: false,
@@ -1885,14 +1716,16 @@ export const characters: Character[] = [
             isKing: false,
             wieldsSword: false,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: true,
             isAdvisor: false,
-            lovesLittleFinger: false,
+            hasBeenMarried: true,
             hasChildren: true,
+            isReligious: false,
+            isOlderGeneration: true,
         },
     },
     {
@@ -1902,7 +1735,7 @@ export const characters: Character[] = [
         description:
             "A devout septon who rose to become High Septon and leader of the Faith Militant. He imprisoned Cersei and Margaery before being blown up in the Sept of Baelor by Cersei's wildfire.",
         image:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/e/e6/The_High_Sparrow.jpg/220px-The_High_Sparrow.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/b/b7/Jonathan_Pryce_High_Sparrow_With_Candle.png",
         traits: {
             isFemale: false,
             isStark: false,
@@ -1926,15 +1759,16 @@ export const characters: Character[] = [
             isKing: false,
             wieldsSword: false,
             hasDirewolf: false,
-            isDead: false,
+            diedAndResurrected: false,
             isWesterosi: true,
-            isSpy: false,
+            isFromEssos: false,
             isMaester: false,
             isHighborn: false,
             isAdvisor: false,
-            lovesLittleFinger: false,
+            hasBeenMarried: false,
             hasChildren: false,
+            isReligious: true,
+            isOlderGeneration: true,
         },
     },
 ];
-

@@ -165,4 +165,39 @@ export const questions: Question[] = [
         text: "Is your character from the older generation (parents' age)?",
         traitKey: "isOlderGeneration",
     },
+    {
+        id: "q_leader",
+        text: "Was your character a military commander or leader of an army?",
+        traitKey: "isLeader",
+    },
+    {
+        id: "q_poison",
+        text: "Is your character known for using poison?",
+        traitKey: "usesPoison",
+    },
+    {
+        id: "q_archery",
+        text: "Is your character known for using a bow?",
+        traitKey: "usesArchery",
+    },
+    {
+        id: "q_tully",
+        text: "Is your character a member of or closely tied to House Tully?",
+        traitKey: "isTully",
+    },
+    {
+        id: "q_arryn",
+        text: "Is your character associated with House Arryn or the Vale?",
+        traitKey: "isArryn",
+    },
+    {
+        id: "q_kingsguard",
+        text: "Did your character serve in the Kingsguard?",
+        traitKey: "isKingsguard",
+    },
+    {
+        id: "q_smallfolk",
+        text: "Is your character a commoner or from the smallfolk?",
+        traitKey: "isSmallfolk",
+    },
 ];
